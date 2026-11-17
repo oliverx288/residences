@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sabrina Residences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Manrope:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="page">
+  <i class="gl"></i><i class="gl"></i><i class="gl"></i><i class="gl"></i>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="house" src="https://cdn.sceneai.art/Bg%20images/1dd58514-cedb-4f70-9aee-709c3f887808.png" alt="Sabrina Residences house">
+
+    <header class="hdr">
+      <a class="logo fd" style="--d:.1s" href="#" aria-label="Sabrina Residences">
+        <svg viewBox="0 0 40 30" width="40" height="30" fill="#fff" aria-hidden="true"><path d="M0 30V12L13 0v18L0 30zm14 0V10l12-10v20L14 30zm14 0V8.5L40 0v21L28 30z"/></svg>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a class="pill home fd" style="--d:.2s" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home</a>
+        <a class="pill fd" style="--d:.28s" href="#latest">Properties</a>
+        <a class="pill fd" style="--d:.36s" href="#">Agent</a>
+        <a class="pill fd" style="--d:.44s" href="#">Partner</a>
+      </nav>
+      <div class="right">
+        <div class="lang fd" style="--d:.52s" role="group" aria-label="Language">
+          <button type="button" data-lang="BA">BA</button>
+          <button type="button" data-lang="EN" class="on">EN</button>
+        </div>
+        <a class="sign fd" style="--d:.6s" href="#">Sign in</a>
+        <button class="burger fd" style="--d:.65s" id="burger" type="button" aria-label="Menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+      <div class="menu" id="menu">
+        <a class="pill home" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home</a>
+        <a class="pill" href="#latest">Properties</a>
+        <a class="pill" href="#">Agent</a>
+        <a class="pill" href="#">Partner</a>
+      </div>
+    </header>
+
+    <div class="row">
+      <h1>
+        <span class="ln ind"><span class="w" style="--d:.55s">Sabrina</span></span>
+        <span class="ln"><span class="w" style="--d:.75s">Residences</span></span>
+        <span class="ln"><span class="w" style="--d:.95s">House</span></span>
+      </h1>
+      <p class="tag" data-split data-start="1.15" data-dur=".7">Trusted real estate<br>experts for a smoother, smarter<br>property journey.</p>
+    </div>
+
+    <div class="explore">
+      <a href="#latest"><span class="w" style="--d:1.85s;animation-duration:.8s">Explore properties</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    </div>
+
+    <div class="vcard">
+      <div class="vbox">
+        <video id="vid" autoplay muted loop playsinline preload="auto" src="https://cdn.sceneai.art/Hero%20Section%20Video/adec243d-ffda-48cf-a8a8-26e6d6bcbe9b.mp4"></video>
+      </div>
+      <p class="cap" data-split data-start="2.15" data-dur=".7">Find a home that fits<br>your lifestyle</p>
+      <div class="bars" id="bars">
+        <div class="bar on"><i></i></div><div class="bar"><i></i></div><div class="bar"><i></i></div><div class="bar"><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR LATEST HOUSES -->
+  <section class="latest" id="latest">
+    <h2>
+      <span class="l"><span class="w" style="--d:0s">Our</span></span>
+      <span class="l"><span class="w" style="--d:.15s">Latest</span></span>
+      <span class="l"><span class="w" style="--d:.3s">Houses</span></span>
+    </h2>
+    <div class="gallery">
+      <div class="card" style="--d:.2s"><img src="https://cdn.sceneai.art/Bg%20images/c789ac4d-f2c8-463a-93f6-1f8c6fa09f9a.png" alt="House 1" loading="lazy"></div>
+      <div class="card" style="--d:.35s"><img src="https://cdn.sceneai.art/Bg%20images/bf2e3004-db02-48a1-8e15-c6a58c158b5c.png" alt="House 2" loading="lazy"></div>
+      <div class="card" style="--d:.5s"><img src="https://cdn.sceneai.art/Bg%20images/dce07180-2db9-45fe-889a-7a11657c6234.png" alt="House 3" loading="lazy"></div>
+    </div>
+  </section>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
