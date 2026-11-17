@@ -48,12 +48,18 @@
 
   // video: never stops + progress bars
   var v=document.getElementById('vid'), bars=[].slice.call(document.querySelectorAll('#bars .bar'));
-  function play(){var p=v.play(); if(p&&p.catch)p.catch(function(){})}
-  ['pause','ended','stalled','suspend','waiting'].forEach(function(ev){v.addEventListener(ev,function(){if(ev==='ended')v.currentTime=0;play()})});
-  v.addEventListener('canplay',play);
-  setInterval(function(){if(v.paused||v.ended)play()},1000);
-  document.addEventListener('visibilitychange',function(){if(!document.hidden)play()});
-  ['touchstart','pointerdown','click'].forEach(function(ev){document.addEventListener(ev,play,{once:true,passive:true})});
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function play(){if(reduced)return;var p=v.play(); if(p&&p.catch)p.catch(function(){})}
+  if(reduced){
+    // respect the user's setting: no autoplay, no forced resume
+    v.removeAttribute('autoplay'); v.loop=false; v.pause();
+  } else {
+    ['pause','ended','stalled','suspend','waiting'].forEach(function(ev){v.addEventListener(ev,function(){if(ev==='ended')v.currentTime=0;play()})});
+    v.addEventListener('canplay',play);
+    setInterval(function(){if(v.paused||v.ended)play()},1000);
+    document.addEventListener('visibilitychange',function(){if(!document.hidden)play()});
+    ['touchstart','pointerdown','click'].forEach(function(ev){document.addEventListener(ev,play,{once:true,passive:true})});
+  }
   var active=0;
   function setActive(i){if(i===active)return;active=i;bars.forEach(function(b,k){b.classList.toggle('on',k===i)})}
   v.addEventListener('timeupdate',function(){
